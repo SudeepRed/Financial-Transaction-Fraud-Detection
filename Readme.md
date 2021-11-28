@@ -48,6 +48,71 @@ Out of the transactions only 30,000 are fraudulent in nature. Thus it is highly 
   - A multi-layered perceptron was used on the training data.A Neural Network with hidden layer sizes 16, 8, 4, 2  and max iterations of 1200. 
   - The models were compared over different activations namely relu, sigmoid and tanh. Precision, recall, f1 score and accuracy were computed and plotted as well as the ROC curves.
 ## Analysis
+- **Logistic Regression**  
+  - Training Accuracy-0.894
+  - Testing Accuracy-0.891
+  - Logistic Regression performs best when the preprocessing is robust scaling
+  - The optimal threshold for the model was approximately 0.15 where the precision and recall value is approximately 0.3
+  - Standard model gave best results as compared to results obtained from models part of grid search.
+
+- **Naive Bayes**
+  - Training Accuracy - 0.881
+  - Testing Accuracy - 0.883
+  - Naive bayes performs best when the preprocessing is robust scaling
+  - The optimal threshold for the model was approximately 0.82 where the precision and recall value is approximately 0.2
+
+
+- **Decision Trees**
+  - Training Accuracy - 0.999
+  - Testing Accuracy - 0.941
+  - Decision Tree performs best when the preprocessing is robust scaling. It has a max depth of 38.
+
+
+- **Random Forest Classifier**
+  - Training Accuracy-0.999
+  - Testing Accuracy-0.961
+  - Random Forest performs best with raw data.
+
+
+- **Support Vector Machine**
+  - Training Accuracy - 0.9018
+  - Testing Accuracy - 0.9022
+  - Precision Score For training - 0.676
+  - Precision Score For testing - 0.660
+  - Recall for testing- 0.1914 
+  - F1 for testing - 0.296
+  - SVM performed best with regularization set to 1 and gamma set to 0.1.
+
+- **Neural Network**
+  - Best Training Accuracy - 0.94184
+  - Best Testing Accuracy - 0.93996
+  - Best Precision Score For training - 0.81244
+  - Best Precision Score For testing - 0.80132
+  - Best Recall for training- 0.60666
+  - Best Recall for testing- 0.59188
+  - Best F1 for training- 0.69463
+  - Best F1 for testing - 0.68086
+  - Neural networks worked best with tanh activation
+ 
+| Model | Accuracy | Presicion | Recall | F1 |
+| ----------- | ----------- |---|---|---|
+| Logistic Regression | 89.3 | 4.9 | 60.3 | 9.08 |
+|  Random Forest |  96.1 | 90.2|72.0|80.60|
+| Decision Trees | 94.2 | 72.5|74.2|73.30|
+| Naive Bayes|  88.3| 40.7|18.8|25.70|
+| SVM |  90.22|66.0|19.14|29.6|
+| Nueral Nets |  93.99|80.13|59.18|68.08|
+
+## Conclusion
+1. With all the tested models the best results were seen with Random Forest Classifiers with an accuracy of 96.1% and with high precision, recall and f1 score of 90.2, 72.0 and 80.6 respectively. 
+2. It was seen that oversampling fraud data and undersampling non-fraudulent data allowed for the models to train better and have better f1 scores and were robust enough to detect outliers.
+3. In the majority of the models the best results were seen with robust scaling of the data.
+
+## Member Contributions
+1. **Aruj Deshwal**-Random Forest, Pre-Processing, Literature Review, finding Dataset, Hyperparameter tuning, Neural Network.
+2. **Abhinav Rawat**- Pre-Processing, Logistic Regression, Data Cleaning, Feature analysis ,Finding Dataset, Hyperparameter tuning.
+3. **Sudeep Reddy**- Literature Review, feature analysis, Decision Tree, Naive Bayes, Pre-processing , SVM.
+
 
 
 
